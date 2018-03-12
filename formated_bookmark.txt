@@ -1,0 +1,238 @@
++"1 Getting Started with Model Predictive Control"|47
+++"1.1 Introduction"|47
+++"1.2 Models and Modeling"|47
++++"1.2.1 Linear Dynamic Models"|48
++++"1.2.2 Input-Output Models"|49
++++"1.2.3 Distributed Models"|50
++++"1.2.4 Discrete Time Models"|51
++++"1.2.5 Constraints"|52
++++"1.2.6 Deterministic and Stochastic"|54
+++"1.3 Introductory MPC Regulator"|55
++++"1.3.1 Linear Quadratic Problem"|55
++++"1.3.2 Optimizing Multistage Functions"|57
++++"1.3.3 Dynamic Programming Solution"|63
++++"1.3.4 The Infinite Horizon LQ Problem"|66
++++"1.3.5 Controllability"|68
++++"1.3.6 Convergence of the Linear Quadratic Regulator"|69
+++"1.4 Introductory State Estimation"|71
++++"1.4.1 Linear Systems and Normal Distributions"|72
++++"1.4.2 Linear Optimal State Estimation"|74
++++"1.4.3 Least Squares Estimation"|78
++++"1.4.4 Moving Horizon Estimation"|83
++++"1.4.5 Observability"|86
++++"1.4.6 Convergence of the State Estimator"|87
+++"1.5 Tracking, Disturbances, and Zero Offset"|91
++++"1.5.1 Tracking"|91
++++"1.5.2 Disturbances and Zero Offset"|93
+++"1.6 Exercises"|106
++"2 Model Predictive Control — Regulation"|135
+++"2.1 Introduction"|135
+++"2.2 Model Predictive Control"|137
+++"2.3 Dynamic Programming Solution"|153
+++"2.4 Stability"|158
++++"2.4.1 Introduction"|158
++++"2.4.2 Stabilizing Conditions: No State Constraints"|159
++++"2.4.3 Stabilizing Conditions: Constrained Problems"|161
++++"2.4.4 Monotonicity of the Value Function"|162
++++"2.4.5 Further Properties of the Value Function V0(·)"|164
++++"2.4.6 Summary"|169
++++"2.4.7 Controllability and Observability"|171
++++"2.4.8 Time-Varying Systems"|172
+++"2.5 Examples of MPC"|177
++++"2.5.1 Unconstrained Systems"|178
+++++"2.5.1.1 Linear Time-Invariant Systems"|178
+++++"2.5.1.2 Linear Time-Varying Systems"|180
+++++"2.5.1.3 Nonlinear Systems"|180
++++"2.5.2 Systems with Control Constraints"|184
+++++"2.5.2.1 Linear Stable Systems"|184
+++++"2.5.2.2 Neutrally Stable Systems"|185
++++"2.5.3 Systems with Control and State Constraints"|188
+++++"2.5.3.1 Linear Systems"|188
+++++"2.5.3.2 Nonlinear Systems"|191
+++"2.6 Is a Terminal Constraint Set Xf Necessary?"|193
++++"2.6.1 Replacing the Terminal Constraint by a Terminal Cost"|193
++++"2.6.2 Omitting the Terminal Constraint"|195
+++"2.7 Stage Cost l(·) not Positive Definite"|199
+++"2.8 Suboptimal MPC"|201
+++"2.9 Tracking"|205
++++"2.9.1 No Uncertainty"|205
++++"2.9.2 Offset-Free MPC"|206
++++"2.9.3 Unreachable Setpoints"|208
+++"2.10 Concluding Comments"|213
+++"2.11 Notes"|215
+++"2.12 Exercises"|218
++"3 Robust Model Predictive Control"|233
+++"3.1 Introduction"|233
++++"3.1.1 Types of Uncertainty"|233
++++"3.1.2 Feedback Versus Open-Loop Control"|234
++++"3.1.3 Robust MPC"|239
++++"3.1.4 Tubes"|242
++++"3.1.5 Difference Inclusion Description of Uncertain Systems"|242
+++"3.2 Nominal (Inherent) Robustness"|244
++++"3.2.1 Introduction"|244
++++"3.2.2 Difference Inclusion Description of Discontinuous Systems"|245
++++"3.2.3 When Is Nominal MPC Robust?"|246
++++"3.2.4 Input-to-State Stability"|249
+++"3.3 Dynamic Programming Solution"|253
++++"3.3.1 Introduction"|253
++++"3.3.2 Preliminary Results"|255
++++"3.3.3 Stability of Min-Max RHC"|259
++++"3.3.4 “Feedback” MPC"|264
+++"3.4 Tube-Based Robust MPC"|266
++++"3.4.1 Introduction"|266
++++"3.4.2 Outer-Bounding Tubes for Linear Systems with Additive Disturbances"|267
++++"3.4.3 Tube-Based MPC of Linear Systems with Additive Disturbances"|272
++++"3.4.4 Improved Tube-Based MPC of Linear Systems with Additive Disturbances"|280
+++"3.5 Tube-Based MPC of Systems with Parametric Uncertainty"|283
+++"3.6 Tube-Based MPC of Nonlinear Systems"|288
++++"3.6.1 The Central Path"|289
++++"3.6.2 Ancillary Controller"|291
++++"3.6.3 Controller Algorithm"|294
++++"3.6.4 Analysis"|295
++++"3.6.5 Choosing Z and V"|296
+++"3.7 Notes"|301
+++"3.8 Exercises"|304
++"4 State Estimation"|311
+++"4.1 Introduction"|311
+++"4.2 Full Information Estimation"|311
++++"4.2.1 State Estimation as Optimal Control of Estimate Error"|318
++++"4.2.2 Duality of Linear Estimation and Regulation"|321
+++"4.3 Moving Horizon Estimation"|323
++++"4.3.1 Zero Prior Weighting"|324
++++"4.3.2 Nonzero Prior Weighting"|326
++++"4.3.3 Constrained Estimation"|333
++++"4.3.4 Smoothing and Filtering Update"|335
+++"4.4 Extended Kalman Filtering"|338
+++"4.5 Unscented Kalman Filtering"|340
+++"4.6 Interlude: EKF, UKF, and MHE Comparison"|342
+++"4.7 Particle Filtering"|347
++++"4.7.1 The Sampled Density of a Transformed Random Variable"|350
++++"4.7.2 Sampling and Importance Sampling"|353
++++"4.7.3 Resampling"|371
++++"4.7.4 The Simplest Particle Filter"|375
++++"4.7.5 A Particle Filter Based on Importance Sampling"|384
++++"4.7.6 Optimal Importance Function"|389
+++"4.8 Combined MHE/Particle Filtering"|394
+++"4.9 Notes"|402
+++"4.10 Exercises"|404
++"5 Output Model Predictive Control"|417
+++"5.1 Introduction"|417
+++"5.2 A Method for Output MPC"|419
+++"5.3 Linear Constrained Systems: Time-Invariant Case"|422
++++"5.3.1 Introduction"|422
++++"5.3.2 State Estimator"|423
++++"5.3.3 Controlling xˆ"|424
++++"5.3.4 Output MPC"|426
+++"5.4 Linear Constrained Systems: Time-Varying Case"|430
++++"5.4.1 Introduction"|430
++++"5.4.2 State Estimator"|431
++++"5.4.3 Controlling xˆ"|431
++++"5.4.4 Control of the Nominal System"|434
++++"5.4.5 Control of the State Estimator"|436
+++"5.5 Offset-Free MPC"|437
++++"5.5.1 Estimation"|438
++++"5.5.2 Control"|440
++++"5.5.3 Stability Analysis"|443
+++"5.6 Nonlinear Constrained Systems"|445
++++"5.6.1 Introduction"|445
++++"5.6.2 State Estimator"|445
++++"5.6.3 Nominal MPC"|446
++++"5.6.4 Tube-Based Output MPC"|447
++++"5.6.5 Choosing Z and V"|449
+++"5.7 Notes"|449
+++"5.8 Exercises"|452
++"6 Distributed Model Predictive Control"|455
+++"6.1 Introduction and Preliminary Results"|455
++++"6.1.1 Least Squares Solution"|456
++++"6.1.2 Stability of Suboptimal MPC"|461
+++"6.2 Unconstrained Two-Player Game"|467
++++"6.2.1 Centralized Control"|468
++++"6.2.2 Decentralized Control"|469
++++"6.2.3 Noncooperative Game"|470
++++"6.2.4 Cooperative Game"|479
++++"6.2.5 Tracking Nonzero Setpoints"|484
++++"6.2.6 State Estimation"|491
+++"6.3 Constrained Two-Player Game"|492
++++"6.3.1 Uncoupled Input Constraints"|494
++++"6.3.2 Coupled Input Constraints"|497
++++"6.3.3 Exponential Stability with Estimate Error"|499
++++"6.3.4 Disturbance Models and Zero Offset"|500
+++"6.4 Constrained M-Player Game"|504
+++"6.5 Nonlinear Distributed MPC"|506
+++"6.6 Notes"|509
+++"6.7 Exercises"|513
++"7 Explicit Control Laws for Constrained Linear Systems"|529
+++"7.1 Introduction"|529
+++"7.2 Parametric Programming"|530
+++"7.3 Parametric Quadratic Programming"|535
++++"7.3.1 Preliminaries"|535
++++"7.3.2 Preview"|536
++++"7.3.3 Optimality Condition for a Convex Program"|537
++++"7.3.4 Solution of the Parametric Quadratic Program"|540
++++"7.3.5 Continuity of V 0(·) and u0(·)"|544
+++"7.4 Constrained Linear Quadratic Control"|545
+++"7.5 Parametric Piecewise Quadratic Programming"|547
+++"7.6 DP Solution of the Constrained LQ Control Problem"|553
+++"7.7 Parametric Linear Programming"|554
++++"7.7.1 Preliminaries"|554
++++"7.7.2 Minimizer u0(x) is Unique for all x ∈ X"|556
+++"7.8 Constrained Linear Control"|559
+++"7.9 Computation"|560
+++"7.10 Notes"|560
+++"7.11 Exercises"|562
++"8 Author Index"|566
++"9 Citation Index"|571
++"9 Subject Index"|576
++"A Mathematical Background"|580
+++"A.1 Introduction"|580
+++"A.2 Vector Spaces"|580
+++"A.3 Range and Nullspace of Matrices"|580
+++"A.4 Linear Equations — Existence and Uniqueness"|581
+++"A.5 Pseudo-Inverse"|581
+++"A.6 Partitioned Matrix Inversion Theorem"|584
+++"A.7 Quadratic Forms"|585
+++"A.8 Norms in Rn"|587
+++"A.9 Sets in Rn"|587
+++"A.10 Sequences"|588
+++"A.11 Continuity"|589
+++"A.12 Derivatives"|592
+++"A.13 Convex Sets and Functions"|597
++++"A.13.1 Convex Sets"|597
++++"A.13.2 Convex Functions"|602
+++"A.14 Differential Equations"|604
+++"A.15 Random Variables and the Probability Density"|610
+++"A.16 Multivariate Density Functions"|615
++++"A.16.1 Statistical Independence and Correlation"|624
+++"A.17 Conditional Probability and Bayes’s Theorem"|628
+++"A.18 Exercises"|634
++"B Stability Theory"|649
+++"B.1 Introduction"|649
+++"B.2 Stability and Asymptotic Stability"|651
+++"B.3 Lyapunov Stability Theory"|654
++++"B.3.1 Lyapunov Function for Linear Systems"|657
+++"B.4 Robust Stability"|657
++++"B.4.1 Nominal Robustness"|658
++++"B.4.2 Robustness"|659
+++"B.5 Control-Lyapunov Functions"|661
+++"B.6 Input-to-State Stability"|664
+++"B.7 Output-to-State Stability and Detectability"|666
+++"B.8 Input/Output-to-State Stability"|667
+++"B.9 Incremental-Input/Output-to-State Stability"|668
+++"B.10 Observability"|668
+++"B.11 Exercises"|670
++"C Optimization"|674
+++"C.1 Dynamic Programming"|674
++++"C.1.1 Optimal Control Problem"|676
++++"C.1.2 Dynamic Programming"|678
+++"C.2 Optimality Conditions"|682
++++"C.2.1 Tangent and Normal Cones"|682
++++"C.2.2 Convex Optimization Problems"|686
++++"C.2.3 Convex Problems: Polyhedral Constraint Set"|688
++++"C.2.4 Nonconvex Problems"|690
++++"C.2.5 Tangent and Normal Cones"|691
++++"C.2.6 Constraint Set Defined by Inequalities"|695
++++"C.2.7 Constraint Set; Equalities and Inequalities"|698
+++"C.3 Set-Valued Functions and Continuity of Value Function"|700
++++"C.3.1 Outer and Inner Semicontinuity"|702
++++"C.3.2 Continuity of the Value Function"|704
+++"C.4 Exercises"|712

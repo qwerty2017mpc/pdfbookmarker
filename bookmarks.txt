@@ -1,0 +1,238 @@
+1 Getting Started with Model Predictive Control 1
+1.1 Introduction 1
+1.2 Models and Modeling 1
+1.2.1 Linear Dynamic Models 2
+1.2.2 Input-Output Models 3
+1.2.3 Distributed Models 4
+1.2.4 Discrete Time Models 5
+1.2.5 Constraints 6
+1.2.6 Deterministic and Stochastic 8
+1.3 Introductory MPC Regulator 9
+1.3.1 Linear Quadratic Problem 9
+1.3.2 Optimizing Multistage Functions 11
+1.3.3 Dynamic Programming Solution 17
+1.3.4 The Infinite Horizon LQ Problem 20
+1.3.5 Controllability 22
+1.3.6 Convergence of the Linear Quadratic Regulator 23
+1.4 Introductory State Estimation 25
+1.4.1 Linear Systems and Normal Distributions 26
+1.4.2 Linear Optimal State Estimation 28
+1.4.3 Least Squares Estimation 32
+1.4.4 Moving Horizon Estimation 37
+1.4.5 Observability 40
+1.4.6 Convergence of the State Estimator 41
+1.5 Tracking, Disturbances, and Zero Offset 45
+1.5.1 Tracking 45
+1.5.2 Disturbances and Zero Offset 47
+1.6 Exercises 60
+2 Model Predictive Control — Regulation 89
+2.1 Introduction 89
+2.2 Model Predictive Control 91
+2.3 Dynamic Programming Solution 107
+2.4 Stability 112
+2.4.1 Introduction 112
+2.4.2 Stabilizing Conditions: No State Constraints 113
+2.4.3 Stabilizing Conditions: Constrained Problems 115
+2.4.4 Monotonicity of the Value Function 116
+2.4.5 Further Properties of the Value Function V0(·) 118 
+2.4.6 Summary 123
+2.4.7 Controllability and Observability 125
+2.4.8 Time-Varying Systems 126
+2.5 Examples of MPC 131
+2.5.1 Unconstrained Systems 132
+2.5.1.1 Linear Time-Invariant Systems 132
+2.5.1.2 Linear Time-Varying Systems 134
+2.5.1.3 Nonlinear Systems 134
+2.5.2 Systems with Control Constraints 138
+2.5.2.1 Linear Stable Systems 138
+2.5.2.2 Neutrally Stable Systems 139
+2.5.3 Systems with Control and State Constraints 142
+2.5.3.1 Linear Systems 142
+2.5.3.2 Nonlinear Systems 145
+2.6 Is a Terminal Constraint Set Xf Necessary? 147
+2.6.1 Replacing the Terminal Constraint by a Terminal Cost 147
+2.6.2 Omitting the Terminal Constraint 149
+2.7 Stage Cost l(·) not Positive Definite 153
+2.8 Suboptimal MPC 155
+2.9 Tracking 159
+2.9.1 No Uncertainty 159
+2.9.2 Offset-Free MPC 160
+2.9.3 Unreachable Setpoints 162
+2.10 Concluding Comments 167
+2.11 Notes 169
+2.12 Exercises 172
+3 Robust Model Predictive Control 187
+3.1 Introduction 187
+3.1.1 Types of Uncertainty 187
+3.1.2 Feedback Versus Open-Loop Control 188
+3.1.3 Robust MPC 193
+3.1.4 Tubes 196
+3.1.5 Difference Inclusion Description of Uncertain Systems 196
+3.2 Nominal (Inherent) Robustness 198
+3.2.1 Introduction 198
+3.2.2 Difference Inclusion Description of Discontinuous Systems 199
+3.2.3 When Is Nominal MPC Robust? 200
+3.2.4 Input-to-State Stability 203
+3.3 Dynamic Programming Solution 207
+3.3.1 Introduction 207
+3.3.2 Preliminary Results 209
+3.3.3 Stability of Min-Max RHC 213
+3.3.4 “Feedback” MPC 218
+3.4 Tube-Based Robust MPC 220
+3.4.1 Introduction 220
+3.4.2 Outer-Bounding Tubes for Linear Systems with Additive Disturbances 221
+3.4.3 Tube-Based MPC of Linear Systems with Additive Disturbances 226
+3.4.4 Improved Tube-Based MPC of Linear Systems with Additive Disturbances 234
+3.5 Tube-Based MPC of Systems with Parametric Uncertainty 237
+3.6 Tube-Based MPC of Nonlinear Systems 242
+3.6.1 The Central Path 243
+3.6.2 Ancillary Controller 245
+3.6.3 Controller Algorithm 248
+3.6.4 Analysis 249
+3.6.5 Choosing Z and V 250
+3.7 Notes 255
+3.8 Exercises 258
+4 State Estimation 265
+4.1 Introduction 265
+4.2 Full Information Estimation 265
+4.2.1 State Estimation as Optimal Control of Estimate Error 272
+4.2.2 Duality of Linear Estimation and Regulation 275
+4.3 Moving Horizon Estimation 277
+4.3.1 Zero Prior Weighting 278
+4.3.2 Nonzero Prior Weighting 280
+4.3.3 Constrained Estimation 287
+4.3.4 Smoothing and Filtering Update 289
+4.4 Extended Kalman Filtering 292
+4.5 Unscented Kalman Filtering 294
+4.6 Interlude: EKF, UKF, and MHE Comparison 296
+4.7 Particle Filtering 301
+4.7.1 The Sampled Density of a Transformed Random Variable 304
+4.7.2 Sampling and Importance Sampling 307
+4.7.3 Resampling 325
+4.7.4 The Simplest Particle Filter 329
+4.7.5 A Particle Filter Based on Importance Sampling 338
+4.7.6 Optimal Importance Function 343
+4.8 Combined MHE/Particle Filtering 348
+4.9 Notes 356
+4.10 Exercises 358
+5 Output Model Predictive Control 371
+5.1 Introduction 371
+5.2 A Method for Output MPC 373
+5.3 Linear Constrained Systems: Time-Invariant Case 376
+5.3.1 Introduction 376
+5.3.2 State Estimator 377
+5.3.3 Controlling xˆ 378
+5.3.4 Output MPC 380
+5.4 Linear Constrained Systems: Time-Varying Case 384
+5.4.1 Introduction 384
+5.4.2 State Estimator 385
+5.4.3 Controlling xˆ 385
+5.4.4 Control of the Nominal System 388
+5.4.5 Control of the State Estimator 390
+5.5 Offset-Free MPC 391
+5.5.1 Estimation 392
+5.5.2 Control 394
+5.5.3 Stability Analysis 397
+5.6 Nonlinear Constrained Systems 399
+5.6.1 Introduction 399
+5.6.2 State Estimator 399
+5.6.3 Nominal MPC 400
+5.6.4 Tube-Based Output MPC 401
+5.6.5 Choosing Z and V 403
+5.7 Notes 403
+5.8 Exercises 406
+6 Distributed Model Predictive Control 409
+6.1 Introduction and Preliminary Results 409
+6.1.1 Least Squares Solution 410
+6.1.2 Stability of Suboptimal MPC 415
+6.2 Unconstrained Two-Player Game 421
+6.2.1 Centralized Control 422
+6.2.2 Decentralized Control 423
+6.2.3 Noncooperative Game 424
+6.2.4 Cooperative Game 433
+6.2.5 Tracking Nonzero Setpoints 438
+6.2.6 State Estimation 445
+6.3 Constrained Two-Player Game 446
+6.3.1 Uncoupled Input Constraints 448
+6.3.2 Coupled Input Constraints 451
+6.3.3 Exponential Stability with Estimate Error 453
+6.3.4 Disturbance Models and Zero Offset 454
+6.4 Constrained M-Player Game 458
+6.5 Nonlinear Distributed MPC 460
+6.6 Notes 463
+6.7 Exercises 467
+7 Explicit Control Laws for Constrained Linear Systems 483
+7.1 Introduction 483
+7.2 Parametric Programming 484
+7.3 Parametric Quadratic Programming 489
+7.3.1 Preliminaries 489
+7.3.2 Preview 490
+7.3.3 Optimality Condition for a Convex Program 491
+7.3.4 Solution of the Parametric Quadratic Program 494 
+7.3.5 Continuity of V 0(·) and u0(·) 498
+7.4 Constrained Linear Quadratic Control 499
+7.5 Parametric Piecewise Quadratic Programming 501
+7.6 DP Solution of the Constrained LQ Control Problem 507
+7.7 Parametric Linear Programming 508
+7.7.1 Preliminaries 508
+7.7.2 Minimizer u0(x) is Unique for all x ∈ X 510
+7.8 Constrained Linear Control 513
+7.9 Computation 514
+7.10 Notes 514
+7.11 Exercises 516
+8 Author Index 520
+9 Citation Index 525
+9 Subject Index 530
+A Mathematical Background 534
+A.1 Introduction 534
+A.2 Vector Spaces 534
+A.3 Range and Nullspace of Matrices 534
+A.4 Linear Equations — Existence and Uniqueness 535
+A.5 Pseudo-Inverse 535
+A.6 Partitioned Matrix Inversion Theorem 538
+A.7 Quadratic Forms 539
+A.8 Norms in Rn 541
+A.9 Sets in Rn 541
+A.10 Sequences 542
+A.11 Continuity 543
+A.12 Derivatives 546
+A.13 Convex Sets and Functions 551
+A.13.1 Convex Sets 551
+A.13.2 Convex Functions 556
+A.14 Differential Equations 558
+A.15 Random Variables and the Probability Density 564
+A.16 Multivariate Density Functions 569
+A.16.1 Statistical Independence and Correlation 578
+A.17 Conditional Probability and Bayes’s Theorem 582
+A.18 Exercises 588
+B Stability Theory 603
+B.1 Introduction 603
+B.2 Stability and Asymptotic Stability 605
+B.3 Lyapunov Stability Theory 608
+B.3.1 Lyapunov Function for Linear Systems 611
+B.4 Robust Stability 611
+B.4.1 Nominal Robustness 612
+B.4.2 Robustness 613
+B.5 Control-Lyapunov Functions 615
+B.6 Input-to-State Stability 618
+B.7 Output-to-State Stability and Detectability 620
+B.8 Input/Output-to-State Stability 621
+B.9 Incremental-Input/Output-to-State Stability 622
+B.10 Observability 622
+B.11 Exercises 624
+C Optimization 628
+C.1 Dynamic Programming 628
+C.1.1 Optimal Control Problem 630
+C.1.2 Dynamic Programming 632
+C.2 Optimality Conditions 636
+C.2.1 Tangent and Normal Cones 636
+C.2.2 Convex Optimization Problems 640
+C.2.3 Convex Problems: Polyhedral Constraint Set 642
+C.2.4 Nonconvex Problems 644
+C.2.5 Tangent and Normal Cones 645
+C.2.6 Constraint Set Defined by Inequalities 649
+C.2.7 Constraint Set; Equalities and Inequalities 652
+C.3 Set-Valued Functions and Continuity of Value Function 654
+C.3.1 Outer and Inner Semicontinuity 656
+C.3.2 Continuity of the Value Function 658
+C.4 Exercises 666
